@@ -1,4 +1,3 @@
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,7 +8,7 @@ namespace RIR.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Advanced Tinkerer's Workshop");
-            Tooltip.SetDefault("Allows you to create rare items");
+            Tooltip.SetDefault("Allows you to create rare accessories");
         }
 
         public override void SetDefaults()
@@ -20,9 +19,9 @@ namespace RIR.Items
             item.value = 10800;
             item.rare = 4;
             item.useTurn = true;
-			item.autoReuse = true;
+            item.autoReuse = true;
             item.useAnimation = 15;
-			item.useTime = 10;
+            item.useTime = 10;
             item.consumable = true;
             item.useStyle = ItemUseStyleID.SwingThrow;
             item.createTile = ModContent.TileType<RIR.Tiles.AdvancedTinkerersWorkshop>();
@@ -31,12 +30,12 @@ namespace RIR.Items
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("AnyCobalt", 5);
-			recipe.AddIngredient(ItemID.TinkerersWorkshop);
+            recipe.AddRecipeGroup("CobaltBar", 5);
+            recipe.AddIngredient(ItemID.TinkerersWorkshop);
             recipe.AddIngredient(ItemID.Book, 5);
             recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }
