@@ -16,7 +16,7 @@ namespace RIR.Items
             item.width = 32;
             item.height = 48;
             item.maxStack = 99;
-            item.value = 10800;
+            item.value = 125000;
             item.rare = 4;
             item.useTurn = true;
             item.autoReuse = true;
